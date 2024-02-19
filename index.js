@@ -1,4 +1,5 @@
-
+const APP_ID = "9cd54306";
+const APP_KEY = "8bd8774d3ae9845ea04fa1da22001b06";
 
 const searchButton = document.querySelector("#search-button");
 const searchInput = document.querySelector("#search-input");
