@@ -1,11 +1,10 @@
-const APP_ID = "9cd54306";
-const APP_KEY = "8bd8774d3ae9845ea04fa1da22001b06";
+import { APIURL } from './config.js';
 
 const searchButton = document.querySelector("#search-button");
 const searchInput = document.querySelector("#search-input");
 const FoodItem = document.querySelector("#container");
 
-const APIURL = `https://api.edamam.com/search?app_id=${APP_ID}&app_key=${APP_KEY}`;
+
 
 const getFood = async (url) => {
   const response = await fetch(url);
@@ -55,6 +54,7 @@ const showFood = (data) => {
 //       getFood(searchUrl);
 //     }
 //   });
+
 
 searchInput.addEventListener("keyup", function (event) {
   const query = event.target.value.trim();
