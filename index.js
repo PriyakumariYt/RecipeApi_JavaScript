@@ -9,7 +9,7 @@ const FoodItem = document.querySelector("#container");
 const getFood = async (url) => {
   const response = await fetch(url);
   const data = await response.json();
-  console.log(data.hits);
+  // console.log(data.hits);
   showFood(data.hits);
 };
 
@@ -40,20 +40,7 @@ const showFood = (data) => {
     FoodItem.appendChild(box);
   });
 };
-// this code is working single page
-//
-//  <button onclick="window.location.href='singlePage.html'">
-//    View Recipe
-//  </button>;
-//     <button onclick="window.location.href='${recipeUrl}'">View Recipe</button>
 
-//   searchButton.addEventListener("click", function () {
-//     const query = searchInput.value.trim();
-//     if (query) {
-//       const searchUrl = `${APIURL}&q=${query}`;
-//       getFood(searchUrl);
-//     }
-//   });
 
 
 searchInput.addEventListener("keyup", function (event) {
